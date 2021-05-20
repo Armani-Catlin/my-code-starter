@@ -5,12 +5,20 @@ public class MyCodeStarter {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Welcome to My Code Starter!");
-		System.out.println("How about I print out a typical skeleton for a new program so that I can reuse it and tweak it when creating new programs, until I memorize it, if I so choose...?");
-		System.out.println("Because here's the deal, when you learn a new language, it takes a while to memorize some of the building blocks.  Once you memorize building blocks, you can do incredible things and build incredible things and apply those things to solve problems, pretty quickly and creatively.  But no need to worry about the memorization part because it takes time, and all programmers learn to reference examples that they can trust work, particularly small reusable portions of code.");
-		System.out.println("So, how about building up my own library of portions of code that I can reference whenever I want?  Yes you can reference api's and online examples and google away, but this can be a cool exercise also... building up your own personal library, and using it to solve problems and complete class exercises and job tasks.");
+		System.out.println("How about I print out a typical skeleton for a new program so that I can reuse it and tweak it when \n" +
+				"creating new programs, until I memorize it, if I so choose...?");
+		System.out.println("Because here's the deal, when you learn a new language, it takes a while to memorize some of the building \n" +
+				"blocks.  Once you memorize building blocks, you can do incredible things and build incredible things and \n" +
+				"apply those things to solve problems, pretty quickly and creatively.  But no need to worry \n" +
+				"about the memorization part because it takes time, and all programmers learn to \n" +
+				"reference examples that they can trust work, particularly small reusable portions of code.");
+		System.out.println("So, how about building up my own library of portions of code that I can reference whenever I want? \n" +
+				"Yes you can reference api's and online examples and google away, but this can be a cool \n" +
+				"exercise also... building up your own personal library, and using it to solve problems and \n" +
+				"complete class exercises and job tasks.");
 
-		String[] portionName = {"Main Skeleton", "String array", "For loop"}; // Can you determine how to load this information from a file instead?
-		String[] portionFilename = {"data/mainSkeleton.txt", "data/stringArray.txt", "data/forLoop.txt"}; // Same here?
+		String[] portionName = {"Main Skeleton", "String array", "For loop", "if-else", "Integer array", "While loop", "Boolean Expressions"}; // Can you determine how to load this information from a file instead?
+		String[] portionFilename = {"data/mainSkeleton.txt", "data/stringArray.txt", "data/forLoop.txt", "data/if-elseStatement.txt", "data/integerArray.txt", "data/whileLoop.txt", "data/booleanExpressions.txt"}; // Same here?
 
 		boolean done = false;
 
@@ -29,7 +37,7 @@ public class MyCodeStarter {
 			}
 	
 			System.out.println("\n\n\n");		
-			try (Scanner code = new Scanner(new File(portionFilename[answer-1]));) {
+			try (Scanner code = new Scanner(new File(portionFilename[answer-1]))) {
 				while (code.hasNextLine()) {
 					String line = code.nextLine();
 					System.out.println(line);
